@@ -9,5 +9,7 @@ web:
     - .:/code
 db:
   image: orchardup/mysql
+  volumes:
+    - db_data:/var/lib/mysql
   environment:
     MYSQL_DATABASE: wordpress
