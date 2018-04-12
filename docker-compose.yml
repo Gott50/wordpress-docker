@@ -13,3 +13,14 @@ db:
     - db_data:/var/lib/mysql
   environment:
     MYSQL_DATABASE: wordpress
+    MYSQL_USERNAME: root
+    MYSQL_ROOT_PASSWORD: examplepass
+phpmyadmin:
+  image: corbinu/docker-phpmyadmin
+  links:
+    - db:mysql
+  ports:
+    - "8100:80"
+  environment:
+    MYSQL_USERNAME: root
+    MYSQL_ROOT_PASSWORD: examplepass
