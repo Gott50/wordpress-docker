@@ -23,6 +23,10 @@ Docker](http://johnny.chadda.se/develop-wordpress-plugins-and-themes-using-docke
 4. Browse to http://[docker ip]:8000/ and you are ready to go! (find the
    ip using `boot2docker ip`)
 
+## Clear Docker
+    
+    docker system prune
+
 ## Tmuxp workspace
 
 A predefined workspace is provided to easily get going.
