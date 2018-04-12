@@ -1,12 +1,11 @@
-web:
-  build: .
-  command: php -S 0.0.0.0:8000 -t /code/wordpress
-  ports:
-    - "8000:8000"
+wordpress:
+  image: wordpress
   links:
-    - db
+    - wordpress_db:mysql
+  ports:
+    - "8000:80"
   volumes:
-    - .:/code
+      - ./wordpress:/var/www/html
 wordpress_db:
   image: mariadb
   volumes:
