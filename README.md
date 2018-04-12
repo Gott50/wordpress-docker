@@ -21,7 +21,8 @@ Docker](http://johnny.chadda.se/develop-wordpress-plugins-and-themes-using-docke
     `cp wp-config.php wordpress/`
 3. Run `docker-compose up` to start the containers.
 4. Browse to http://[docker ip]:8000/ and you are ready to go! (find the
-   ip using `boot2docker ip`)
+   ip using `boot2docker ip`).
+   phpMyAdmin is accessible at http://[docker ip]:8100/
 
 ## Clear Docker
     
