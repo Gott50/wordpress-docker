@@ -16,13 +16,22 @@ Docker](http://johnny.chadda.se/develop-wordpress-plugins-and-themes-using-docke
 ## Getting Started
 
 1. Clone this repostory:
-    `git clone --recursive https://github.com/gott50/wordpress-docker.git`
-2. Copy the provided config file to the WordPress directory:
-    `cp wp-config.php wordpress/`
-3. Run `docker-compose up` to start the containers.
+    `git clone https://github.com/gott50/wordpress-docker.git`
+2. Run `docker-compose up` to start the containers.
+3. sudo chmod -R 777 ./wordpress
 4. Browse to http://[docker ip]:8000/ and you are ready to go! (find the
    ip using `boot2docker ip`).
    phpMyAdmin is accessible at http://[docker ip]:8100/
+
+## Restore form Backup
+1. use a Plugin like [UpdraftPlus](https://updraftplus.com/)
+2. login to [adminer](http://localhost:8080) with your WORDPRESS_DB_USER and WORDPRESS_DB_PASSWORD
+3. update wp_options: 
+   1. siteurl: http://[docker ip]:8000/
+   2. home: http://[docker ip]:8000/
+4. wp_users
+   1. user_login: wordpress
+   2. user_pass: $P$B3JPafrPC9oiNOkN9jvxhUZK/Rfu6m.
 
 ## Clear Docker
     
